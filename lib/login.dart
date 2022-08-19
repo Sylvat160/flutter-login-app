@@ -77,7 +77,9 @@ class _LoginFormState extends State<LoginForm> {
                           backgroundColor: Color.fromARGB(255, 27, 39, 70),
                           child: IconButton(
                             color: Colors.white,
-                            onPressed: () {}, 
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'register');
+                            }, 
                             icon: Icon(
                               Icons.arrow_forward,
                             )
