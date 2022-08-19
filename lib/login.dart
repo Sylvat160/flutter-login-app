@@ -31,33 +31,92 @@ class _LoginFormState extends State<LoginForm> {
                 ),
               ),
             ),
-            Container(
-              padding:  EdgeInsets.only(top:MediaQuery.of(context).size.height*0.5, right: 35, left: 35),
-              child: Column(
-                children: [
-                  TextField(
-                    decoration:InputDecoration(
-                      fillColor: Colors.grey.shade100,
-                      filled: true,
-                      hintText: 'Email',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)
+            SingleChildScrollView(
+              child: Container(
+                padding:  EdgeInsets.only(top:MediaQuery.of(context).size.height*0.5, right: 35, left: 35),
+                child: Column(
+                  children: [
+                    TextField(
+                      decoration:InputDecoration(
+                        fillColor: Colors.grey.shade100,
+                        filled: true,
+                        hintText: 'Email',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)
+                        )
                       )
-                    )
-                  ),
-                  SizedBox(height: 30,),
-                  TextField(
-                    obscureText: true,
-                    decoration:InputDecoration(
-                      fillColor: Colors.grey.shade100,
-                      filled: true,
-                      hintText: 'Mot de passe',
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    SizedBox(height: 30,),
+                    TextField(
+                      obscureText: true,
+                      decoration:InputDecoration(
+                        fillColor: Colors.grey.shade100,
+                        filled: true, 
+                        hintText: 'Mot de passe',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)
+                        )
                       )
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children:  [
+                        const Text(
+                          'Se connecter',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 27, 39, 70),
+                            fontSize: 27,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Color.fromARGB(255, 27, 39, 70),
+                          child: IconButton(
+                            color: Colors.white,
+                            onPressed: () {}, 
+                            icon: Icon(
+                              Icons.arrow_forward,
+                            )
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 40,
+                    ),
+                    Row(
+                      mainAxisAlignment:  MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextButton(
+                          onPressed: () {}, 
+                          child: const Text(
+                            'S\'inscrire',
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 27, 39, 70), 
+                            ),
+                            ),
+                        ),
+                        TextButton(
+                          onPressed: () {}, 
+                          child: const Text(
+                            'Mot de passe oublié ?',
+                            style: TextStyle(
+                              decoration: TextDecoration.underline,
+                              fontSize: 12,
+                              color: Color.fromARGB(255, 27, 39, 70), 
+                            ),
+                            ),
+                        ),
+                      ],
                     )
-                  ),
-                ],
+                  ],
+                ),
               ),
             )
           ],
